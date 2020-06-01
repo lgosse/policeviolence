@@ -29,7 +29,7 @@ const ViolenceItem = (props: Props) => {
         </h3>
         {
           <p className="violence-item__location">
-            {violence.location}, {violence.state}, {new Date(violence.date).toLocaleString()}
+            {violence.location}, {violence.state}, {new Date(violence.date).toLocaleDateString()}
           </p>
         }
         <p className="violence-item__description">
@@ -44,7 +44,7 @@ const ViolenceItem = (props: Props) => {
       </div>
       <div className="violence-item__picture">
         {violence.picture &&
-          <img src={violence.picture} alt={violence.name} />
+          <img loading="lazy" src={violence.picture} alt={violence.name} />
         }
       </div>
     </div>
