@@ -6,8 +6,8 @@ import ViolenceItem from './ViolenceItem';
 const List = () => {
   return (
     <div className="violence-list">
-      {violences.map((item, idx) => (
-        <ViolenceItem violence={item} key={idx} />
+      {violences.map((item) => (
+        <ViolenceItem violence={item} key={item.id} />
       ))}
     </div>
   );

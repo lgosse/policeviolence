@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './ViolenceItem.scss'
 
 type Props = {
@@ -6,10 +6,15 @@ type Props = {
 }
 
 interface Violence {
-  title: string;
-  names?: string[];
+  id: number;
+  name: string;
+  age?: number;
+  picture?: string;
+  location: string;
   description: string;
-  sources: string[];
+  disposition: string;
+  article: string;
+  date: string;
 };
 
 const ViolenceItem = (props: Props) => {
@@ -17,31 +22,22 @@ const ViolenceItem = (props: Props) => {
 
   return (
     <div className="violence-item">
-      <h3 className="violence-item__title">
-        {violence.title}
+      <h3 className="violence-item__name">
+        {violence.name}, {violence.age}
       </h3>
       {
-        violence.names &&
-        <p className="violence-item__names">
-          {violence.names.map(name => <span key={name}>{name}</span>)}
+        <p className="violence-item__location">
+          {violence.location}, {new Date(violence.date).toLocaleString()}
         </p>
       }
       <p className="violence-item__description">
         {violence.description}
       </p>
       <p className="violence-item__sources">
-        Sources:
-        &nbsp;
-        {
-          violence.sources.map((source, idx) => (
-            <Fragment key={idx}>
-              <a href={source} target="_blank" rel="noopener noreferrer">
-                {source.replace(/https:\/\//, '').replace(/\/*/, '')}
-              </a>
-              , &nbsp;
-            </ Fragment>
-          ))
-        }
+        Article:&nbsp;
+        <a href={violence.article} target="_blank" rel="noopener noreferrer">
+          {violence.article.replace(/https:\/\//, '').replace(/\/.+/, '')}
+        </a>
       </p>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import List from './components/List';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <section>
         <List />
       </section>
+      <Footer />
     </div>
   );
 }
