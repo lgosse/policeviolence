@@ -1,0 +1,13 @@
+.violence-item {
+  max-width: 400px;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
+  p {
+    margin: 8px 0;
+  }
+  &__title {
+    margin-bottom: 4px;
+  }
+  &__names {
+    font-style: italic;
+  }
+}

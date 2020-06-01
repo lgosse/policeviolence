@@ -1,0 +1,12 @@
+.app {
+  &__header {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    h1 {
+      color: black;
+      font-size: 7vw;
+      font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    }
+  }
+}
