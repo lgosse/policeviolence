@@ -2,11 +2,17 @@
   &__header {
     width: 70%;
     margin: auto;
-    text-align: center;
     h1 {
+      text-align: center;
       color: black;
       font-size: 7vw;
       font-family: 'Mukta', Arial, Helvetica, sans-serif;
+    }
+    h2 {
+      font-size: 1.7vw;
+      font-weight: 500;
+      font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
+      text-align: left;
     }
   }
 }

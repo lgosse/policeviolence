@@ -1,6 +1,15 @@
 .violence-item {
-  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
   font-family: 'Titillium Web', Helvetica, sans-serif;
+  margin-bottom: 20px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+  }
   p {
     margin: 8px 0;
   }
@@ -9,5 +18,23 @@
   }
   &__location {
     font-style: italic;
+  }
+  &__picture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-width: 200px;
+    min-height: 200px;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
