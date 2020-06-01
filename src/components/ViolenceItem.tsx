@@ -25,7 +25,7 @@ const ViolenceItem = (props: Props) => {
     <div className="violence-item">
       <div className="violence-item__container">
         <h3 className="violence-item__name">
-          {violence.name}, {violence.age}
+          {violence.name}{violence.age && `, ${violence.age}`}
         </h3>
         {
           <p className="violence-item__location">
